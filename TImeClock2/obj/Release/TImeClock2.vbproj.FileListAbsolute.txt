@@ -1,0 +1,14 @@
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\bin\Release\Logins.accdb
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\bin\Release\TImeClock2.exe.config
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\bin\Release\TImeClock2.exe
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\bin\Release\TImeClock2.pdb
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\bin\Release\TImeClock2.xml
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Release\TImeClock2.LoginDialogvb.resources
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Release\TImeClock2.Resources.resources
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Release\TImeClock2.Register.resources
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Release\TImeClock2.StandardUserMenu.resources
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Release\TImeClock2.vbproj.GenerateResource.cache
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Release\TImeClock2.vbproj.CoreCompileInputs.cache
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Release\TImeClock2.exe
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Release\TImeClock2.xml
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Release\TImeClock2.pdb
