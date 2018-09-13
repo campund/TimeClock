@@ -11,5 +11,11 @@ C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Debug\TImeClock2.vbproj.C
 C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Debug\TImeClock2.exe
 C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Debug\TImeClock2.xml
 C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Debug\TImeClock2.pdb
-C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\bin\Debug\Logins.accdb
 C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Debug\TImeClock2.Register.resources
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Debug\TImeClock2.StudentList.resources
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\bin\Debug\TImeClock2.exe.manifest
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\bin\Debug\TImeClock2.application
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Debug\TImeClock2.exe.manifest
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Debug\TImeClock2.application
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\obj\Debug\TImeClock2.administratorUserMenu.resources
+C:\Users\Cam\Desktop\Program\TImeClock2\TImeClock2\bin\Debug\Logins.accdb

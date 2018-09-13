@@ -7,6 +7,7 @@
 
     Private Sub RegisterButton_Click(sender As Object, e As EventArgs) Handles registerButton.Click
         LoginsTableAdapter1.Insert(usernameText.Text, passwordText.Text, accountCombo.Text, firstnameText.Text, lastnameText.Text)
+
         MessageBox.Show("Successfully Registered!")
         LoginDialogvb.Show()
         Me.Close()

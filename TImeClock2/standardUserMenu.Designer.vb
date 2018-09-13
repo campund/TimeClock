@@ -24,7 +24,6 @@ Partial Class StandardUserMenu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -42,15 +41,6 @@ Partial Class StandardUserMenu
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Clock In"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(184, 85)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(96, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "User Settings"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -109,7 +99,6 @@ Partial Class StandardUserMenu
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "StandardUserMenu"
         Me.Text = "User Menu"
@@ -119,7 +108,6 @@ Partial Class StandardUserMenu
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label

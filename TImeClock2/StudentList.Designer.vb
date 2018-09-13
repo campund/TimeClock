@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class administratorUserMenu
+Partial Class StudentList
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -27,30 +27,29 @@ Partial Class administratorUserMenu
         Me.Logins = New TImeClock2.Logins()
         Me.TimesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TimesTableAdapter = New TImeClock2.LoginsTableAdapters.TimesTableAdapter()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClockedINDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClockedOutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ReasonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Logins, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TimesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FirstNameDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.ClockedINDataGridViewTextBoxColumn, Me.ClockedOutDataGridViewTextBoxColumn, Me.ReasonDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.LastNameDataGridViewTextBoxColumn, Me.ClockedINDataGridViewTextBoxColumn, Me.ClockedOutDataGridViewTextBoxColumn, Me.ReasonDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.TimesBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(543, 240)
+        Me.DataGridView1.Size = New System.Drawing.Size(646, 195)
         Me.DataGridView1.TabIndex = 0
         '
         'Logins
@@ -66,6 +65,13 @@ Partial Class administratorUserMenu
         'TimesTableAdapter
         '
         Me.TimesTableAdapter.ClearBeforeFill = True
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FirstNameDataGridViewTextBoxColumn
         '
@@ -102,28 +108,17 @@ Partial Class administratorUserMenu
         Me.ReasonDataGridViewTextBoxColumn.Name = "ReasonDataGridViewTextBoxColumn"
         Me.ReasonDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(12, 246)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'administratorUserMenu
+        'StudentList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(544, 277)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(646, 230)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "administratorUserMenu"
-        Me.Text = "administratorUserMenu"
+        Me.Name = "StudentList"
+        Me.Text = "StudentList"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Logins, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TimesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -132,11 +127,10 @@ Partial Class administratorUserMenu
     Friend WithEvents Logins As Logins
     Friend WithEvents TimesBindingSource As BindingSource
     Friend WithEvents TimesTableAdapter As LoginsTableAdapters.TimesTableAdapter
+    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LastNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ClockedINDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ClockedOutDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ReasonDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
-    Friend WithEvents BindingSource1 As BindingSource
 End Class
