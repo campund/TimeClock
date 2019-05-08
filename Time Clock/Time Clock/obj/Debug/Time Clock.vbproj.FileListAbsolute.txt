@@ -1,0 +1,56 @@
+c:\users\cam\desktop\test\Time Clock\Time Clock\obj\Debug\Time Clock.vbprojAssemblyReference.cache
+c:\users\cam\desktop\test\Time Clock\Time Clock\obj\Debug\Time_Clock.Login.resources
+c:\users\cam\desktop\test\Time Clock\Time Clock\obj\Debug\Time_Clock.Resources.resources
+c:\users\cam\desktop\test\Time Clock\Time Clock\obj\Debug\Time Clock.vbproj.GenerateResource.cache
+c:\users\cam\desktop\test\Time Clock\Time Clock\obj\Debug\Time Clock.vbproj.CoreCompileInputs.cache
+c:\users\cam\desktop\test\Time Clock\Time Clock\bin\Debug\Time Clock.exe.config
+c:\users\cam\desktop\test\Time Clock\Time Clock\bin\Debug\Time Clock.exe
+c:\users\cam\desktop\test\Time Clock\Time Clock\bin\Debug\Time Clock.pdb
+c:\users\cam\desktop\test\Time Clock\Time Clock\bin\Debug\Time Clock.xml
+c:\users\cam\desktop\test\Time Clock\Time Clock\bin\Debug\MySql.Data.dll
+c:\users\cam\desktop\test\Time Clock\Time Clock\bin\Debug\Google.Protobuf.dll
+c:\users\cam\desktop\test\Time Clock\Time Clock\bin\Debug\MySql.Data.xml
+c:\users\cam\desktop\test\Time Clock\Time Clock\obj\Debug\Time Clock.vbproj.CopyComplete
+c:\users\cam\desktop\test\Time Clock\Time Clock\obj\Debug\Time Clock.exe
+c:\users\cam\desktop\test\Time Clock\Time Clock\obj\Debug\Time Clock.xml
+c:\users\cam\desktop\test\Time Clock\Time Clock\obj\Debug\Time Clock.pdb
+c:\Users\Cam\Desktop\test\Time Clock\Time Clock\obj\Debug\Time_Clock.adminMain.resources
+c:\Users\Cam\Desktop\test\Time Clock\Time Clock\obj\Debug\Time_Clock.standardMain.resources
+c:\Users\Cam\Desktop\test\Time Clock\Time Clock\obj\Debug\Time_Clock.ClockoutConfirm.resources
+c:\Users\Cam\Desktop\test\Time Clock\Time Clock\obj\Debug\Time_Clock.adminConfirm.resources
+c:\Users\Cam\Desktop\test\Time Clock\Time Clock\obj\Debug\Time_Clock.SplashScreen.resources
+c:\Users\Cam\Desktop\test\Time Clock\Time Clock\obj\Debug\Time_Clock.CustomSplash.resources
+c:\Users\Cam\Desktop\test\Time Clock\Time Clock\bin\Debug\Time Clock.exe.manifest
+c:\Users\Cam\Desktop\test\Time Clock\Time Clock\bin\Debug\Time Clock.application
+c:\Users\Cam\Desktop\test\Time Clock\Time Clock\obj\Debug\Time Clock.exe.manifest
+c:\Users\Cam\Desktop\test\Time Clock\Time Clock\obj\Debug\Time Clock.application
+C:\Users\Cam\Desktop\test\Time Clock\Time Clock\obj\Debug\Time Clock.vbproj.ResolveComReference.cache
+C:\Users\Cam\Desktop\test\Time Clock\Time Clock\obj\Debug\Time_Clock.NewUSer.resources
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time Clock.vbprojAssemblyReference.cache
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time Clock.vbproj.ResolveComReference.cache
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time Clock.exe
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time Clock.xml
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time Clock.pdb
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\bin\Debug\Time Clock.exe.config
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\bin\Debug\Time Clock.exe.manifest
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\bin\Debug\Time Clock.application
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\bin\Debug\Time Clock.exe
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\bin\Debug\Time Clock.pdb
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\bin\Debug\Time Clock.xml
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\bin\Debug\Google.Protobuf.dll
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\bin\Debug\MySql.Data.xml
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time_Clock.adminConfirm.resources
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time_Clock.adminMain.resources
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time_Clock.ClockoutConfirm.resources
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time_Clock.CustomSplash.resources
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time_Clock.Login.resources
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time_Clock.Resources.resources
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time_Clock.NewUSer.resources
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time_Clock.SplashScreen.resources
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time_Clock.standardMain.resources
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time Clock.vbproj.GenerateResource.cache
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time Clock.vbproj.CoreCompileInputs.cache
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time Clock.exe.manifest
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time Clock.application
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time Clock.vbproj.CopyComplete
+C:\Users\Faculty\Desktop\Time Clock\Time Clock\obj\Debug\Time_Clock.AdminSearchDialog.resources
