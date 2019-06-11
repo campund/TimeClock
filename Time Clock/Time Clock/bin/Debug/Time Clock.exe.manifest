@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Time Clock.exe" size="275416">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Time Clock.exe" size="283096">
       <assemblyIdentity name="Time Clock" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2D3h9r3Qc1jBQDuy5Fgg1kwlY30o41lTC04ju/tThFk=</dsig:DigestValue>
+        <dsig:DigestValue>VfOTItuQcU89IrW5gLAwLk7h+rcnrxlqyvutCag8fsA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

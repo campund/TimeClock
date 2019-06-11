@@ -23,28 +23,18 @@ Partial Class ClockoutConfirm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.clockOutbutton = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.reasonList = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'clockOutbutton
         '
-        Me.clockOutbutton.Location = New System.Drawing.Point(12, 91)
+        Me.clockOutbutton.Location = New System.Drawing.Point(150, 91)
         Me.clockOutbutton.Name = "clockOutbutton"
         Me.clockOutbutton.Size = New System.Drawing.Size(75, 23)
         Me.clockOutbutton.TabIndex = 0
         Me.clockOutbutton.Text = "Clock Out"
         Me.clockOutbutton.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(137, 91)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -68,9 +58,9 @@ Partial Class ClockoutConfirm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(237, 126)
+        Me.ControlBox = False
         Me.Controls.Add(Me.reasonList)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.clockOutbutton)
         Me.Name = "ClockoutConfirm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -81,7 +71,6 @@ Partial Class ClockoutConfirm
     End Sub
 
     Friend WithEvents clockOutbutton As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents reasonList As ComboBox
 End Class

@@ -12,50 +12,52 @@ Public Class ClockoutConfirm
     Dim Time = TimeString
 
     Private Sub clockOutbutton_Click(sender As Object, e As EventArgs) Handles clockOutbutton.Click
-        MySQLConn = New MySqlConnection
-        Dim READER As MySqlDataReader
-        Dim count As Integer
-        Dim reason As String = reasonList.SelectedItem
+        If reasonList.SelectedItem = "Another Teacher" Then
+            ClockOutTeacher.Show()
+        Else
+
+            MySQLConn = New MySqlConnection
+            Dim READER As MySqlDataReader
+            Dim count As Integer
+            Dim reason As String = reasonList.SelectedItem
 
 
 
 
-        MySQLConn.ConnectionString =
-            "server=localhost;userid=root;password=Class19;database=jag"
-        Try
+            MySQLConn.ConnectionString =
+                "server=localhost;userid=root;password=Class19;database=jag"
+            Try
 
-            MySQLConn.Open()
+                MySQLConn.Open()
 
-            Dim Query As String
+                Dim Query As String
 
-            Query = "Insert into jag.attendance (fname,lname,grade, timeOUT, Reason) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "')"
+                Query = "Insert into jag.attendance (fname,lname,grade, timeOUT, Reason) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "')"
 
-            COMMAND = New MySqlCommand(Query, MySQLConn)
-            READER = Command.ExecuteReader
-            count = 0
+                COMMAND = New MySqlCommand(Query, MySQLConn)
+                READER = Command.ExecuteReader
+                count = 0
 
-            MySQLConn.Close()
-            MsgBox("Successfully clocked out! Returning you to the home screen!")
-            Login.Show()
-            Me.Close()
+                MySQLConn.Close()
+                MsgBox("Successfully clocked out! Returning you to the home screen!")
+                Login.Show()
+                Me.Close()
 
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        End Try
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            End Try
+
+        End If
     End Sub
 
     Private Sub ClockoutConfirm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        reasonList.Items.Add("Another Teacher")
+        reasonList.Items.Add("Bathroom")
         reasonList.Items.Add("End of Class")
         reasonList.Items.Add("Guidence Department")
-        reasonList.Items.Add("Another Teacher")
         reasonList.Items.Add("Media Center")
         reasonList.Items.Add("Nurse")
-        reasonList.Items.Add("Bathroom")
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        standardMain.Show()
-        Me.Close()
 
     End Sub
+
 End Class

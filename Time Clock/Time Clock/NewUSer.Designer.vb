@@ -38,120 +38,108 @@ Partial Class NewUSer
         '
         'firstnameTextBox
         '
-        Me.firstnameTextBox.Location = New System.Drawing.Point(117, 42)
-        Me.firstnameTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.firstnameTextBox.Location = New System.Drawing.Point(78, 27)
         Me.firstnameTextBox.Name = "firstnameTextBox"
-        Me.firstnameTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.firstnameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.firstnameTextBox.TabIndex = 0
         '
         'lastnameTextBox
         '
-        Me.lastnameTextBox.Location = New System.Drawing.Point(117, 106)
-        Me.lastnameTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.lastnameTextBox.Location = New System.Drawing.Point(78, 69)
         Me.lastnameTextBox.Name = "lastnameTextBox"
-        Me.lastnameTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.lastnameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.lastnameTextBox.TabIndex = 1
         '
         'usernameTextBox
         '
-        Me.usernameTextBox.Location = New System.Drawing.Point(117, 183)
-        Me.usernameTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.usernameTextBox.Location = New System.Drawing.Point(78, 119)
         Me.usernameTextBox.Name = "usernameTextBox"
-        Me.usernameTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.usernameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.usernameTextBox.TabIndex = 2
         '
         'passwordTextBox
         '
-        Me.passwordTextBox.Location = New System.Drawing.Point(117, 258)
-        Me.passwordTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.passwordTextBox.Location = New System.Drawing.Point(78, 168)
         Me.passwordTextBox.Name = "passwordTextBox"
-        Me.passwordTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.passwordTextBox.Size = New System.Drawing.Size(100, 20)
         Me.passwordTextBox.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 42)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 20)
+        Me.Label1.Size = New System.Drawing.Size(60, 13)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "First Name:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 111)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(12, 72)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 20)
+        Me.Label2.Size = New System.Drawing.Size(61, 13)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Last Name:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(22, 188)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(15, 122)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(87, 20)
+        Me.Label3.Size = New System.Drawing.Size(58, 13)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Username:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(22, 258)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(15, 168)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(82, 20)
+        Me.Label4.Size = New System.Drawing.Size(56, 13)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Password:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(4, 343)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(3, 223)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(99, 20)
+        Me.Label5.Size = New System.Drawing.Size(68, 13)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Grade Level:"
         '
         'gradeCombo
         '
         Me.gradeCombo.FormattingEnabled = True
-        Me.gradeCombo.Location = New System.Drawing.Point(116, 338)
-        Me.gradeCombo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.gradeCombo.Location = New System.Drawing.Point(77, 220)
         Me.gradeCombo.Name = "gradeCombo"
-        Me.gradeCombo.Size = New System.Drawing.Size(150, 28)
+        Me.gradeCombo.Size = New System.Drawing.Size(101, 21)
         Me.gradeCombo.TabIndex = 9
         '
         'registerButton
         '
-        Me.registerButton.Location = New System.Drawing.Point(9, 423)
-        Me.registerButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.registerButton.Location = New System.Drawing.Point(6, 275)
         Me.registerButton.Name = "registerButton"
-        Me.registerButton.Size = New System.Drawing.Size(112, 35)
+        Me.registerButton.Size = New System.Drawing.Size(75, 23)
         Me.registerButton.TabIndex = 10
         Me.registerButton.Text = "Register"
         Me.registerButton.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(154, 423)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button2.Location = New System.Drawing.Point(103, 275)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 35)
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "Cancel"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'NewUSer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(304, 477)
+        Me.ClientSize = New System.Drawing.Size(203, 310)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.registerButton)
@@ -165,10 +153,9 @@ Partial Class NewUSer
         Me.Controls.Add(Me.usernameTextBox)
         Me.Controls.Add(Me.lastnameTextBox)
         Me.Controls.Add(Me.firstnameTextBox)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "NewUSer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "6"
+        Me.Text = "New User Registration"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

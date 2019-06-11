@@ -15,6 +15,7 @@ Public Class Login
         Dim READER As MySqlDataReader
         Dim count As Integer
 
+
         MySqlConn.ConnectionString =
             "server=localhost;userid=root;password=Class19;database=jag"
         Try
@@ -23,8 +24,7 @@ Public Class Login
 
             Query = "select * from jag.users where Username='" & UsernameTextBox.Text & "'and password='" & PasswordTextBox.Text & "'"
 
-            COMMAND = New MySqlCommand(Query, MySqlConn)
-            READER = COMMAND.ExecuteReader
+
             count = 0
             While READER.Read
                 count = count + 1
@@ -36,7 +36,7 @@ Public Class Login
                 fname = READER.GetString("First_Name")
                 lname = READER.GetString("Last_Name")
                 gradelevel = READER.GetString("Grade")
-                If gradelevel = "Teacher" Then
+                If gradelevel = "Teacher/Adminstrator" Then
 
                     adminConfirm.Show()
                     Me.Close()
@@ -97,7 +97,7 @@ Public Class Login
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MsgBox("This feature is a work in progress. Contact an administrator to add a user")
+        '   MsgBox("This feature is a work in progress. Contact an administrator to add a user")
 
         NewUSer.Show()
         Me.Close()

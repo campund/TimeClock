@@ -1,6 +1,7 @@
 ﻿Imports System.Text
 Imports System.Data.SqlClient
 Imports Microsoft.Office.Core
+
 Imports MySql.Data.MySqlClient
 
 Public Class adminMain
@@ -10,6 +11,8 @@ Public Class adminMain
     Dim COMMAND As MySqlCommand
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Button4.Enabled = True
+
         MySQLConn = New MySqlConnection
         Dim READER As MySqlDataReader
         Dim count As Integer
@@ -46,6 +49,7 @@ Public Class adminMain
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Button4.Enabled = True
         MySQLConn = New MySqlConnection
         Dim READER As MySqlDataReader
         Dim count As Integer
@@ -95,7 +99,8 @@ Public Class adminMain
     End Sub
 
     Private Sub exportData_Click(sender As Object, e As EventArgs) Handles exportData.Click
-        SaveFileDialog1.Filter = "Microsoft Excel files (*.xlsx*)|*.xlsx"
+        SaveFileDialog1.Filter = "Microsoft Excel files (*.xlsx*)|*.xlsx| PDF files (*.pdf*)|*.pdf"
+
         SaveFileDialog1.ShowDialog()
 
 
@@ -191,7 +196,18 @@ Public Class adminMain
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        AdminSearchDialog.Show()
+        If Button4.Enabled = False Then
+            MsgBox("Please click on one of the available tables before clicking this button")
+        ElseIf Button4.Enabled = True Then
+            AdminSearchDialog.Show()
+        End If
+
+
+
+    End Sub
+
+    Private Sub adminMain_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Button4.Enabled = False
 
 
     End Sub
