@@ -1,6 +1,11 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Login
+
+End Class
+Imports MySql.Data.MySqlClient
+
+Public Class Login
     Dim MySqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
     Public fname As String
@@ -15,16 +20,16 @@ Public Class Login
         Dim READER As MySqlDataReader
         Dim count As Integer
 
-
         MySqlConn.ConnectionString =
-            "server=localhost;userid=root;password=Class19;database=jag"
+        "server=localhost;userid=root;password=Class19;database=jag"
         Try
             MySqlConn.Open()
             Dim Query As String
 
             Query = "select * from jag.users where Username='" & UsernameTextBox.Text & "'and password='" & PasswordTextBox.Text & "'"
 
-
+            COMMAND = New MySqlCommand(Query, MySqlConn)
+            READER = COMMAND.ExecuteReader
             count = 0
             While READER.Read
                 count = count + 1
@@ -36,7 +41,7 @@ Public Class Login
                 fname = READER.GetString("First_Name")
                 lname = READER.GetString("Last_Name")
                 gradelevel = READER.GetString("Grade")
-                If gradelevel = "Teacher/Adminstrator" Then
+                If gradelevel = "Teacher" Then
 
                     adminConfirm.Show()
                     Me.Close()
@@ -73,7 +78,7 @@ Public Class Login
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles Me.Load
         MySqlConn = New MySqlConnection
         MySqlConn.ConnectionString =
-            "server=localhost;userid=root;password=Class19;database=jag"
+        "server=localhost;userid=root;password=Class19;database=jag"
 
         Try
             MySqlConn.Open()
@@ -97,10 +102,11 @@ Public Class Login
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        '   MsgBox("This feature is a work in progress. Contact an administrator to add a user")
+        '  MsgBox("This feature is a work in progress. Contact an administrator to add a user")
 
         NewUSer.Show()
-        Me.Close()
+        'Me.Close()
 
     End Sub
+
 End Class
