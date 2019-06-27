@@ -53,6 +53,15 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public ReadOnly Property schoolSelection() As String
+            Get
+                Return CType(Me("schoolSelection"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

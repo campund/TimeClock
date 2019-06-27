@@ -5,7 +5,7 @@ Public Class adminConfirm
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
         Dim password As String = TextBox1.Text
 
-        If password = "NorthviewHighSchoolJAG" Then
+        If password = "JobsForAmericasGraduates" Then
             adminMain.Show()
             Me.Close()
 
@@ -22,4 +22,15 @@ Public Class adminConfirm
         Me.Close()
     End Sub
 
+    Private Sub adminConfirm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Dim School As String = SchoolCombo.SelectedItem
+
+        SchoolCombo.Items.Add("Northview")
+        SchoolCombo.Items.Add("Terre Haute North")
+        SchoolCombo.Items.Add("Terre Haute South")
+        SchoolCombo.Items.Add("West Vigo")
+        SchoolCombo.Items.Add("Cloverdale")
+        SchoolCombo.Items.Add("Riverton Parke")
+        SchoolCombo.Items.Add("Turkey Run")
+    End Sub
 End Class

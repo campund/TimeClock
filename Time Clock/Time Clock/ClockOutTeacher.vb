@@ -6,6 +6,7 @@ Public Class ClockOutTeacher
     Dim fname As String = standardMain.fname
     Dim lname As String = standardMain.lname
     Dim grade As String = standardMain.gradelevel
+    Dim School As String = standardMain.School
 
 
     Dim Time = TimeString
@@ -14,20 +15,52 @@ Public Class ClockOutTeacher
         MySQLConn = New MySqlConnection
         Dim READER As MySqlDataReader
         Dim count As Integer
-        Dim reason As String = ClockoutConfirm.reasonList.SelectedItem
-        Dim Teacher As String = teacherInput.text
+        Dim reason As String = "Another Teacher"
+        Dim Teacher As String = teacherInput.Text
+
+        Dim SchoolConn As String
+        Dim WriteQuery As String
+        If School = "Northview" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSTimeCock;password=Class19!;database=Northview; SslMode = none"
+            WriteQuery = "Insert into Northview.attendance (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
+        ElseIf School = "Terre Haute North" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=THNJAG;password=eyfImPSDtOUghm2z;database=TerreHauteNorth; SslMode = none"
+            WriteQuery = "Insert into TerreHauteNorth.attendance (fname,lname,grade,Date,timeIN) values (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
+
+
+        ElseIf School = "Terre Haute South" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=THSJAG;password=1367k8vPZUxhP6go;database=TerreHauteSouth; SslMode = none"
+            WriteQuery = "Insert into TerreHauteSouth.attendance (fname,lname,grade,Date,timeIN) values (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
+
+        ElseIf School = "West Vigo" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=WestVigoJAG;password=5C98tdsZOr8iQaTT;database=WestVigo; SslMode = none"
+            WriteQuery = "Insert into WestVigo.attendance (fname,lname,grade,Date,timeIN) values (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
+
+        ElseIf School = "Cloverdale" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=CloverdaleJAG;password=iOIaRpAa34hl9UFH;database=Cloverdale; SslMode = none"
+            WriteQuery = "Insert into Cloverdale.attendance (fname,lname,grade,Date,timeIN) values (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
+
+        ElseIf School = "Riverton Parke" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=RivertonJAG;password=04PHQWanMT8RKg1I;database=RivertonParke; SslMode = none"
+            WriteQuery = "Insert into RivertonParke.attendance (fname,lname,grade,Date,timeIN) values (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
+
+        ElseIf School = "Turkey Run" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=TurkeyRunJAG;password=KOa5dXlZPsu8uyJ4;database=TurkeyRun; SslMode = none"
+            WriteQuery = "Insert into jag.attendance (fname,lname,grade,Date,timeIN) values (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
+
+        End If
 
 
 
-        MySQLConn.ConnectionString =
-            "server=localhost;userid=root;password=Class19;database=jag"
+        MySQLConn.ConnectionString = SchoolConn
+
         Try
 
             MySQLConn.Open()
 
             Dim Query As String
 
-            Query = "Insert into jag.attendance (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
+            Query = WriteQuery
 
             COMMAND = New MySqlCommand(Query, MySQLConn)
             READER = COMMAND.ExecuteReader

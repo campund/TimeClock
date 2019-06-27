@@ -34,32 +34,34 @@ Partial Class NewUSer
         Me.gradeCombo = New System.Windows.Forms.ComboBox()
         Me.registerButton = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.SchoolCombo = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'firstnameTextBox
         '
-        Me.firstnameTextBox.Location = New System.Drawing.Point(78, 27)
+        Me.firstnameTextBox.Location = New System.Drawing.Point(76, 54)
         Me.firstnameTextBox.Name = "firstnameTextBox"
         Me.firstnameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.firstnameTextBox.TabIndex = 0
         '
         'lastnameTextBox
         '
-        Me.lastnameTextBox.Location = New System.Drawing.Point(78, 69)
+        Me.lastnameTextBox.Location = New System.Drawing.Point(76, 96)
         Me.lastnameTextBox.Name = "lastnameTextBox"
         Me.lastnameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.lastnameTextBox.TabIndex = 1
         '
         'usernameTextBox
         '
-        Me.usernameTextBox.Location = New System.Drawing.Point(78, 119)
+        Me.usernameTextBox.Location = New System.Drawing.Point(76, 146)
         Me.usernameTextBox.Name = "usernameTextBox"
         Me.usernameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.usernameTextBox.TabIndex = 2
         '
         'passwordTextBox
         '
-        Me.passwordTextBox.Location = New System.Drawing.Point(78, 168)
+        Me.passwordTextBox.Location = New System.Drawing.Point(76, 195)
         Me.passwordTextBox.Name = "passwordTextBox"
         Me.passwordTextBox.Size = New System.Drawing.Size(100, 20)
         Me.passwordTextBox.TabIndex = 3
@@ -67,7 +69,7 @@ Partial Class NewUSer
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 27)
+        Me.Label1.Location = New System.Drawing.Point(10, 54)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(60, 13)
         Me.Label1.TabIndex = 4
@@ -76,7 +78,7 @@ Partial Class NewUSer
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 72)
+        Me.Label2.Location = New System.Drawing.Point(10, 99)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 13)
         Me.Label2.TabIndex = 5
@@ -85,7 +87,7 @@ Partial Class NewUSer
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 122)
+        Me.Label3.Location = New System.Drawing.Point(13, 149)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(58, 13)
         Me.Label3.TabIndex = 6
@@ -94,7 +96,7 @@ Partial Class NewUSer
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(15, 168)
+        Me.Label4.Location = New System.Drawing.Point(13, 195)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(56, 13)
         Me.Label4.TabIndex = 7
@@ -103,7 +105,7 @@ Partial Class NewUSer
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(3, 223)
+        Me.Label5.Location = New System.Drawing.Point(1, 250)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(68, 13)
         Me.Label5.TabIndex = 8
@@ -112,14 +114,14 @@ Partial Class NewUSer
         'gradeCombo
         '
         Me.gradeCombo.FormattingEnabled = True
-        Me.gradeCombo.Location = New System.Drawing.Point(77, 220)
+        Me.gradeCombo.Location = New System.Drawing.Point(75, 247)
         Me.gradeCombo.Name = "gradeCombo"
         Me.gradeCombo.Size = New System.Drawing.Size(101, 21)
         Me.gradeCombo.TabIndex = 9
         '
         'registerButton
         '
-        Me.registerButton.Location = New System.Drawing.Point(6, 275)
+        Me.registerButton.Location = New System.Drawing.Point(4, 302)
         Me.registerButton.Name = "registerButton"
         Me.registerButton.Size = New System.Drawing.Size(75, 23)
         Me.registerButton.TabIndex = 10
@@ -128,19 +130,38 @@ Partial Class NewUSer
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(103, 275)
+        Me.Button2.Location = New System.Drawing.Point(101, 302)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "Cancel"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(26, 27)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(43, 13)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "School:"
+        '
+        'SchoolCombo
+        '
+        Me.SchoolCombo.FormattingEnabled = True
+        Me.SchoolCombo.Location = New System.Drawing.Point(71, 19)
+        Me.SchoolCombo.Name = "SchoolCombo"
+        Me.SchoolCombo.Size = New System.Drawing.Size(105, 21)
+        Me.SchoolCombo.TabIndex = 13
+        '
         'NewUSer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(203, 310)
+        Me.ClientSize = New System.Drawing.Size(187, 340)
         Me.ControlBox = False
+        Me.Controls.Add(Me.SchoolCombo)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.registerButton)
         Me.Controls.Add(Me.gradeCombo)
@@ -173,4 +194,6 @@ Partial Class NewUSer
     Friend WithEvents gradeCombo As ComboBox
     Friend WithEvents registerButton As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents SchoolCombo As ComboBox
 End Class

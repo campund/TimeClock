@@ -23,10 +23,12 @@ Partial Class adminConfirm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
+        Me.OK_Button = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.SchoolCombo = New System.Windows.Forms.ComboBox()
+        Me.School = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -36,23 +38,14 @@ Partial Class adminConfirm
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(85, 72)
+        Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(44, 132)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
         Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'OK_Button
-        '
-        Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.OK_Button.Location = New System.Drawing.Point(3, 3)
-        Me.OK_Button.Name = "OK_Button"
-        Me.OK_Button.Size = New System.Drawing.Size(67, 23)
-        Me.OK_Button.TabIndex = 0
-        Me.OK_Button.Text = "OK"
         '
         'Cancel_Button
         '
@@ -64,10 +57,19 @@ Partial Class adminConfirm
         Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Cancel"
         '
+        'OK_Button
+        '
+        Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.OK_Button.Location = New System.Drawing.Point(3, 3)
+        Me.OK_Button.Name = "OK_Button"
+        Me.OK_Button.Size = New System.Drawing.Size(67, 23)
+        Me.OK_Button.TabIndex = 0
+        Me.OK_Button.Text = "OK"
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Location = New System.Drawing.Point(12, 68)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(116, 13)
         Me.Label1.TabIndex = 1
@@ -75,11 +77,28 @@ Partial Class adminConfirm
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(15, 36)
+        Me.TextBox1.Location = New System.Drawing.Point(15, 95)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox1.Size = New System.Drawing.Size(154, 20)
         Me.TextBox1.TabIndex = 2
+        '
+        'SchoolCombo
+        '
+        Me.SchoolCombo.FormattingEnabled = True
+        Me.SchoolCombo.Location = New System.Drawing.Point(15, 44)
+        Me.SchoolCombo.Name = "SchoolCombo"
+        Me.SchoolCombo.Size = New System.Drawing.Size(154, 21)
+        Me.SchoolCombo.TabIndex = 3
+        '
+        'School
+        '
+        Me.School.AutoSize = True
+        Me.School.Location = New System.Drawing.Point(12, 28)
+        Me.School.Name = "School"
+        Me.School.Size = New System.Drawing.Size(46, 13)
+        Me.School.TabIndex = 4
+        Me.School.Text = "School1"
         '
         'adminConfirm
         '
@@ -87,7 +106,9 @@ Partial Class adminConfirm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(243, 113)
+        Me.ClientSize = New System.Drawing.Size(202, 173)
+        Me.Controls.Add(Me.School)
+        Me.Controls.Add(Me.SchoolCombo)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -97,7 +118,7 @@ Partial Class adminConfirm
         Me.Name = "adminConfirm"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "adminConfirm"
+        Me.Text = "Adminstrator Confirmation"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -108,4 +129,6 @@ Partial Class adminConfirm
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents SchoolCombo As ComboBox
+    Friend WithEvents School As Label
 End Class

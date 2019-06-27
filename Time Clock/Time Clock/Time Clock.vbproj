@@ -159,6 +159,12 @@
     <Compile Include="NewUser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="pleaseWait.Designer.vb">
+      <DependentUpon>pleaseWait.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pleaseWait.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SplashScreen.Designer.vb">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewUSer.resx">
       <DependentUpon>NewUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pleaseWait.resx">
+      <DependentUpon>pleaseWait.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>

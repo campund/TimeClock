@@ -4,7 +4,9 @@ Imports Microsoft.Office.Core
 
 Imports MySql.Data.MySqlClient
 
+
 Public Class adminMain
+    Dim School As String = adminConfirm.SchoolCombo.SelectedItem
     Public bSource As New BindingSource
     Public dbDataSet As New DataTable
     Dim MySQLConn As MySqlConnection
@@ -14,21 +16,52 @@ Public Class adminMain
         Button4.Enabled = True
 
         MySQLConn = New MySqlConnection
+        Dim SchoolConn As String
+        Dim ReadQuery As String
+
         Dim READER As MySqlDataReader
         Dim count As Integer
         Dim SDA As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim bSource As New BindingSource
+        If School = "Northview" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSTimeCock;password=Class19!;database=Northview; SslMode = none"
+            ReadQuery = "SELECT * FROM Northview.Users"
+        ElseIf School = "Terre Haute North" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=THNJAG;password=eyfImPSDtOUghm2z;database=TerreHauteNorth; SslMode = none"
+            ReadQuery = "SELECT * FROM TerreHauteNorth.Users"
+
+        ElseIf School = "Terre Haute South" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=THSJAG;password=1367k8vPZUxhP6go;database=TerreHauteSouth; SslMode = none"
+            ReadQuery = "SELECT * FROM TerreHauteSouth.Users"
+
+        ElseIf School = "West Vigo" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=WestVigoJAG;password=5C98tdsZOr8iQaTT;database=WestVigo; SslMode = none"
+            ReadQuery = "SELECT * FROM WestVigo.Users"
+
+        ElseIf School = "Cloverdale" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=CloverdaleJAG;password=iOIaRpAa34hl9UFH;database=Cloverdale; SslMode = none"
+            ReadQuery = "SELECT * FROM Cloverdale.Users"
+
+        ElseIf School = "Riverton Parke" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=RivertonJAG;password=04PHQWanMT8RKg1I;database=RivertonParke; SslMode = none"
+            ReadQuery = "SELECT * FROM RivertonParke.Users"
+
+        ElseIf School = "Turkey Run" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=TurkeyRunJAG;password=KOa5dXlZPsu8uyJ4;database=TurkeyRun; SslMode = none"
+            ReadQuery = "SELECT * FROM TurkeyRun.Users"
+
+        End If
 
 
-        MySQLConn.ConnectionString =
-            "server=localhost;userid=root;password=Class19;database=jag"
+        MySQLConn.ConnectionString = SchoolConn
+
         Try
 
             MySQLConn.Open()
 
             Dim Query As String
-            Query = "select * from jag.users"
+            Query = ReadQuery
 
             COMMAND = New MySqlCommand(Query, MySQLConn)
             SDA.SelectCommand = COMMAND
@@ -50,20 +83,54 @@ Public Class adminMain
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Button4.Enabled = True
+
         MySQLConn = New MySqlConnection
+        Dim SchoolConn As String
+        Dim ReadQuery As String
+
         Dim READER As MySqlDataReader
         Dim count As Integer
         Dim SDA As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim bSource As New BindingSource
+        If School = "Northview" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSTimeCock;password=Class19!;database=Northview; SslMode = none"
+            ReadQuery = "SELECT * FROM Northview.attendance"
+        ElseIf School = "Terre Haute North" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=THNJAG;password=eyfImPSDtOUghm2z;database=TerreHauteNorth; SslMode = none"
+            ReadQuery = "SELECT * FROM TerreHauteNorth.attendance"
+
+        ElseIf School = "Terre Haute South" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=THSJAG;password=1367k8vPZUxhP6go;database=TerreHauteSouth; SslMode = none"
+            ReadQuery = "SELECT * FROM TerreHauteSouth.attendance"
+
+        ElseIf School = "West Vigo" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=WestVigoJAG;password=5C98tdsZOr8iQaTT;database=WestVigo; SslMode = none"
+            ReadQuery = "SELECT * FROM WestVigo.attendance"
+
+        ElseIf School = "Cloverdale" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=CloverdaleJAG;password=iOIaRpAa34hl9UFH;database=Cloverdale; SslMode = none"
+            ReadQuery = "SELECT * FROM Cloverdale.attendance"
+
+        ElseIf School = "Riverton Parke" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=RivertonJAG;password=04PHQWanMT8RKg1I;database=RivertonParke; SslMode = none"
+            ReadQuery = "SELECT * FROM RivertonParke.attendance"
+
+        ElseIf School = "Turkey Run" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=TurkeyRunJAG;password=KOa5dXlZPsu8uyJ4;database=TurkeyRun; SslMode = none"
+            ReadQuery = "SELECT * FROM TurkeyRun.attendance"
+
+        End If
 
 
-        MySQLConn.ConnectionString =
-            "server=localhost;userid=root;password=Class19;database=jag"
+        MySQLConn.ConnectionString = SchoolConn
+
         Try
 
             MySQLConn.Open()
 
             Dim Query As String
-            Query = "select * from jag.attendance"
+            Query = ReadQuery
 
             COMMAND = New MySqlCommand(Query, MySQLConn)
             SDA.SelectCommand = COMMAND
@@ -74,6 +141,8 @@ Public Class adminMain
             count = 0
 
             MySQLConn.Close()
+
+
 
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
@@ -98,12 +167,12 @@ Public Class adminMain
         End Try
     End Sub
 
-    Private Sub exportData_Click(sender As Object, e As EventArgs) Handles exportData.Click
-        SaveFileDialog1.Filter = "Microsoft Excel files (*.xlsx*)|*.xlsx| PDF files (*.pdf*)|*.pdf"
+    Private Sub ExportData_Click(sender As Object, e As EventArgs) Handles exportData.Click
+        SaveFileDialog1.Filter = "Microsoft Excel files (*.xlsx*)|*.xlsx"
 
         SaveFileDialog1.ShowDialog()
 
-
+        pleaseWait.Show()
         Dim xlApp As Microsoft.Office.Interop.Excel.Application
         Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
         Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
@@ -114,7 +183,8 @@ Public Class adminMain
         xlApp = New Microsoft.Office.Interop.Excel.Application
 
         xlWorkBook = xlApp.Workbooks.Add(misValue)
-        xlWorkSheet = xlWorkBook.Sheets("sheet1")
+        xlWorkSheet = xlWorkBook.Sheets("Sheet1")
+
 
 
         For i = 0 To DataGridView1.RowCount - 2
@@ -126,6 +196,9 @@ Public Class adminMain
             Next
         Next
 
+        xlWorkSheet.Range("A:W").EntireColumn.AutoFit()
+        xlWorkSheet.Range("F:G").NumberFormat = "h:mm AM/PM"
+
         xlWorkSheet.SaveAs(SaveFileDialog1.FileName)
         xlWorkBook.Close()
         xlApp.Quit()
@@ -133,6 +206,8 @@ Public Class adminMain
         releaseObject(xlApp)
         releaseObject(xlWorkBook)
         releaseObject(xlWorkSheet)
+        pleaseWait.Close()
+
 
         MsgBox("You can find the file at " & SaveFileDialog1.FileName)
 
@@ -209,6 +284,7 @@ Public Class adminMain
     Private Sub adminMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         Button4.Enabled = False
 
+        School = Login.School
 
     End Sub
 End Class

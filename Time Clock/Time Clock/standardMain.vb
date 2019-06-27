@@ -1,11 +1,14 @@
 ﻿Imports MySql.Data.MySqlClient
 
+
+
 Public Class standardMain
     Dim MySQLConn As MySqlConnection
     Dim COMMAND As MySqlCommand
     Public fname As String = Login.fname
     Public lname As String = Login.lname
     Public gradelevel As String = Login.gradelevel
+    Public School As String = Login.School
 
 
     Dim Time = TimeString
@@ -15,7 +18,7 @@ Public Class standardMain
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        Label1.Text = "Welcome " & fname & " " & lname & "!"
+        Label1.Text = "Welcome " & fname & " " & lname & "! "
 
         Label2.Text = "The current time is: " & Time
 
@@ -26,16 +29,48 @@ Public Class standardMain
         MySQLConn = New MySqlConnection
         Dim READER As MySqlDataReader
         Dim count As Integer
+        Dim SchoolConn As String
+        Dim WriteQuery As String
+        If School = "Northview" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSTimeCock;password=Class19!;database=Northview; SslMode = none"
+            WriteQuery = "Insert into Northview.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+        ElseIf School = "Terre Haute North" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=THNJAG;password=eyfImPSDtOUghm2z;database=TerreHauteNorth; SslMode = none"
+            WriteQuery = "Insert into TerreHauteNorth.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
 
-        MySQLConn.ConnectionString =
-            "server=localhost;userid=root;password=Class19;database=jag"
+
+        ElseIf School = "Terre Haute South" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=THSJAG;password=1367k8vPZUxhP6go;database=TerreHauteSouth; SslMode = none"
+            WriteQuery = "Insert into TerreHauteSouth.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+
+        ElseIf School = "West Vigo" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=WestVigoJAG;password=5C98tdsZOr8iQaTT;database=WestVigo; SslMode = none"
+            WriteQuery = "Insert into WestVigo.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+
+        ElseIf School = "Cloverdale" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=CloverdaleJAG;password=iOIaRpAa34hl9UFH;database=Cloverdale; SslMode = none"
+            WriteQuery = "Insert into Cloverdale.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+
+        ElseIf School = "Riverton Parke" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=RivertonJAG;password=04PHQWanMT8RKg1I;database=RivertonParke; SslMode = none"
+            WriteQuery = "Insert into RivertonParke.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+
+        ElseIf School = "Turkey Run" Then
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=TurkeyRunJAG;password=KOa5dXlZPsu8uyJ4;database=TurkeyRun; SslMode = none"
+            WriteQuery = "Insert into TurkeyRun.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+
+        End If
+
+
+        MySQLConn.ConnectionString = SchoolConn
+
         Try
 
             MySQLConn.Open()
 
             Dim Query As String
 
-            Query = "Insert into jag.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+            Query = WriteQuery
 
             COMMAND = New MySqlCommand(Query, MySQLConn)
             READER = COMMAND.ExecuteReader

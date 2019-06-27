@@ -2,14 +2,19 @@
 
 
 Public Class ClockoutConfirm
+    Public Function MySQLTimeCalc()
+
+    End Function
+
     Dim MySQLConn As MySqlConnection
     Dim COMMAND As MySqlCommand
     Dim fname As String = standardMain.fname
     Dim lname As String = standardMain.lname
     Dim grade As String = standardMain.gradelevel
-
+    Dim School As String = standardMain.School
 
     Dim Time = TimeString
+
 
     Private Sub clockOutbutton_Click(sender As Object, e As EventArgs) Handles clockOutbutton.Click
         If reasonList.SelectedItem = "Another Teacher" Then
@@ -21,11 +26,41 @@ Public Class ClockoutConfirm
             Dim count As Integer
             Dim reason As String = reasonList.SelectedItem
 
+            Dim SchoolConn As String
+            Dim WriteQuery As String
+            If School = "Northview" Then
+                SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSTimeCock;password=Class19!;database=Northview; SslMode = none"
+                WriteQuery = "Insert into Northview.attendance (fname,lname,grade, timeOUT, Reason) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "')"
+            ElseIf School = "Terre Haute North" Then
+                SchoolConn = "server=51.79.68.145;Port=3306; userid=THNJAG;password=eyfImPSDtOUghm2z;database=TerreHauteNorth; SslMode = none"
+                WriteQuery = "Insert into TerreHauteNorth.attendance (fname,lname,grade, timeOUT, Reason) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "')"
 
 
+            ElseIf School = "Terre Haute South" Then
+                SchoolConn = "server=51.79.68.145;Port=3306; userid=THSJAG;password=1367k8vPZUxhP6go;database=TerreHauteSouth; SslMode = none"
+                WriteQuery = "Insert into TerreHauteSouth.attendance (fname,lname,grade, timeOUT, Reason) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "')"
 
-            MySQLConn.ConnectionString =
-                "server=localhost;userid=root;password=Class19;database=jag"
+            ElseIf School = "West Vigo" Then
+                SchoolConn = "server=51.79.68.145;Port=3306; userid=WestVigoJAG;password=5C98tdsZOr8iQaTT;database=WestVigo; SslMode = none"
+                WriteQuery = "Insert into WestVigo.attendance (fname,lname,grade, timeOUT, Reason) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "')"
+
+            ElseIf School = "Cloverdale" Then
+                SchoolConn = "server=51.79.68.145;Port=3306; userid=CloverdaleJAG;password=iOIaRpAa34hl9UFH;database=Cloverdale; SslMode = none"
+                WriteQuery = "Insert into Cloverdale.attendance (fname,lname,grade, timeOUT, Reason) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "')"
+
+            ElseIf School = "Riverton Parke" Then
+                SchoolConn = "server=51.79.68.145;Port=3306; userid=RivertonJAG;password=04PHQWanMT8RKg1I;database=RivertonParke; SslMode = none"
+                WriteQuery = "Insert into RivertonParke.attendance (fname,lname,grade, timeOUT, Reason) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "')"
+
+            ElseIf School = "Turkey Run" Then
+                SchoolConn = "server=51.79.68.145;Port=3306; userid=TurkeyRunJAG;password=KOa5dXlZPsu8uyJ4;database=TurkeyRun; SslMode = none"
+                WriteQuery = "Insert into TurkeyRun.attendance (fname,lname,grade, timeOUT, Reason) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "')"
+
+            End If
+
+
+            '   MySQLConn.ConnectionString = 
+
             Try
 
                 MySQLConn.Open()
@@ -35,7 +70,7 @@ Public Class ClockoutConfirm
                 Query = "Insert into jag.attendance (fname,lname,grade, timeOUT, Reason) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "')"
 
                 COMMAND = New MySqlCommand(Query, MySQLConn)
-                READER = Command.ExecuteReader
+                READER = COMMAND.ExecuteReader
                 count = 0
 
                 MySQLConn.Close()
