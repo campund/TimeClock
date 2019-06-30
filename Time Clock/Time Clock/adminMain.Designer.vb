@@ -69,7 +69,7 @@ Partial Class adminMain
         '
         'exportData
         '
-        Me.exportData.Location = New System.Drawing.Point(506, 256)
+        Me.exportData.Location = New System.Drawing.Point(567, 255)
         Me.exportData.Name = "exportData"
         Me.exportData.Size = New System.Drawing.Size(75, 23)
         Me.exportData.TabIndex = 4

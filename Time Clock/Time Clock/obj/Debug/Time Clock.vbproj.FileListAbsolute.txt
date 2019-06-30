@@ -86,3 +86,4 @@ C:\Users\Cam\Source\Repos\campund\TimeClock\Time Clock\Time Clock\obj\Debug\Time
 C:\Users\Cam\Source\Repos\campund\TimeClock\Time Clock\Time Clock\obj\Debug\Time_Clock.FirstRun2.resources
 C:\Users\Cam\source\repos\campund\TimeClock\Time Clock\Time Clock\obj\Debug\Time_Clock.ClockOutTeacher.resources
 C:\Users\Cam\Source\Repos\campund\TimeClock\Time Clock\Time Clock\obj\Debug\Time_Clock.pleaseWait.resources
+C:\Users\Cam\Source\Repos\campund\TimeClock\Time Clock\Time Clock\obj\Debug\Time_Clock.schoolSelection.resources

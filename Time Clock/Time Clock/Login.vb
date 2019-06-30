@@ -1,6 +1,7 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Login
+    Dim mainSchool As String = My.Settings.schoolSelection
     Dim MySqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
     Public fname As String
@@ -14,7 +15,7 @@ Public Class Login
         Dim count As Integer
 
         MySqlConn.ConnectionString =
-        "server=51.79.68.145;Port=3306; userid=NHSTimeCock;password=Class19!;database=Northview; SslMode = none"
+        "server=51.79.68.145;Port=3306; userid=NHSJAG;password=NFG0Muo4w45wKxzS;database=Northview; SslMode = none"
         Try
             MySqlConn.Open()
             Dim Query As String
@@ -122,7 +123,7 @@ Public Class Login
         Dim count As Integer
 
         MySqlConn.ConnectionString =
-        "server=51.79.68.145;Port=3306; userid=THNJAG;password=eyfImPSDtOUghm2z;database=TerreHauteSouth; SslMode = none"
+        "server=51.79.68.145;Port=3306; userid=THNJAG;password=eyfImPSDtOUghm2z;database=TerreHauteNorth; SslMode = none"
         Try
             MySqlConn.Open()
             Dim Query As String
@@ -434,7 +435,6 @@ Public Class Login
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Sets the school list
-
         SchoolCombo.Items.Add("Northview")
         SchoolCombo.Items.Add("Terre Haute North")
         SchoolCombo.Items.Add("Terre Haute South")
@@ -442,25 +442,6 @@ Public Class Login
         SchoolCombo.Items.Add("Cloverdale")
         SchoolCombo.Items.Add("Riverton Parke")
         SchoolCombo.Items.Add("Turkey Run")
-
-
-        MySqlConn = New MySqlConnection
-        MySqlConn.ConnectionString =
-        "server=localhost;userid=root;password=Class19;database=jag"
-
-        Try
-            MySqlConn.Open()
-
-            MySqlConn.Close()
-
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            MySqlConn.Close()
-
-
-        End Try
-
     End Sub
 
     Private Sub LogoPictureBox_Click(sender As Object, e As EventArgs) Handles LogoPictureBox.Click

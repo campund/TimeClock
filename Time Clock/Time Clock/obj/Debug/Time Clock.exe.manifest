@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Time Clock.exe" size="304088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Time Clock.exe" size="306136">
       <assemblyIdentity name="Time Clock" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>I+5hpw4xxoVXvZuR4C7q5VadlLS2B48mQ5sA8BB4tQo=</dsig:DigestValue>
+        <dsig:DigestValue>SuVWiccrBh9teBHN8g20VlhAriMsw+2sg3pxn7sWp90=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -87,13 +87,13 @@
       <dsig:DigestValue>ySIo4R7XNB9djGPncJnWosTxx/w24q9lbqCR0scEbsA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Time Clock.exe.config" size="889">
+  <file name="Time Clock.exe.config" size="901">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>xPhEWMBnRGd3VV32JVWD4ggKgI1iY8zoOZGNcomtvcQ=</dsig:DigestValue>
+      <dsig:DigestValue>uMhcLrQLi/j+FHzojlVk2d0tjtzecJ5ioesJdo9ysYk=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

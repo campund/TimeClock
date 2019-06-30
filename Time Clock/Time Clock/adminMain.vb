@@ -6,15 +6,21 @@ Imports MySql.Data.MySqlClient
 
 
 Public Class adminMain
-    Dim School As String = adminConfirm.SchoolCombo.SelectedItem
+    Public Export1 As String
+    Public Export2 As String
     Public bSource As New BindingSource
     Public dbDataSet As New DataTable
     Dim MySQLConn As MySqlConnection
     Dim COMMAND As MySqlCommand
 
+    'Username Table
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Button1.Enabled = False
+        Button2.Enabled = True
         Button4.Enabled = True
-
+        Export1 = True
+        Export2 = False
+        Dim School As String = adminConfirm.School
         MySQLConn = New MySqlConnection
         Dim SchoolConn As String
         Dim ReadQuery As String
@@ -25,7 +31,7 @@ Public Class adminMain
         Dim dbDataSet As New DataTable
         Dim bSource As New BindingSource
         If School = "Northview" Then
-            SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSTimeCock;password=Class19!;database=Northview; SslMode = none"
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSJAG;password=NFG0Muo4w45wKxzS;database=Northview; SslMode = none"
             ReadQuery = "SELECT * FROM Northview.Users"
         ElseIf School = "Terre Haute North" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=THNJAG;password=eyfImPSDtOUghm2z;database=TerreHauteNorth; SslMode = none"
@@ -81,8 +87,12 @@ Public Class adminMain
 
     End Sub
 
+    'Attendance Database Table
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Button1.Enabled = True
+        Button2.Enabled = False
         Button4.Enabled = True
+        Dim school As String = adminConfirm.School
 
         MySQLConn = New MySqlConnection
         Dim SchoolConn As String
@@ -94,7 +104,7 @@ Public Class adminMain
         Dim dbDataSet As New DataTable
         Dim bSource As New BindingSource
         If School = "Northview" Then
-            SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSTimeCock;password=Class19!;database=Northview; SslMode = none"
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSJAG;password=NFG0Muo4w45wKxzS;database=Northview; SslMode = none"
             ReadQuery = "SELECT * FROM Northview.attendance"
         ElseIf School = "Terre Haute North" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=THNJAG;password=eyfImPSDtOUghm2z;database=TerreHauteNorth; SslMode = none"
@@ -151,6 +161,8 @@ Public Class adminMain
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        adminConfirm.Close()
+
         Login.Show()
         Me.Close()
 
@@ -168,105 +180,103 @@ Public Class adminMain
     End Sub
 
     Private Sub ExportData_Click(sender As Object, e As EventArgs) Handles exportData.Click
-        SaveFileDialog1.Filter = "Microsoft Excel files (*.xlsx*)|*.xlsx"
+        If Button1.Enabled = True AndAlso Button2.Enabled = False Then
+            SaveFileDialog1.Filter = "Microsoft Excel files (*.xlsx*)|*.xlsx"
 
-        SaveFileDialog1.ShowDialog()
-
-        pleaseWait.Show()
-        Dim xlApp As Microsoft.Office.Interop.Excel.Application
-        Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
-        Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
-        Dim misValue As Object = System.Reflection.Missing.Value
-        Dim i As Integer
-        Dim j As Integer
-
-        xlApp = New Microsoft.Office.Interop.Excel.Application
-
-        xlWorkBook = xlApp.Workbooks.Add(misValue)
-        xlWorkSheet = xlWorkBook.Sheets("Sheet1")
+            SaveFileDialog1.ShowDialog()
 
 
 
-        For i = 0 To DataGridView1.RowCount - 2
-            For j = 0 To DataGridView1.ColumnCount - 1
-                For k As Integer = 1 To DataGridView1.Columns.Count
-                    xlWorkSheet.Cells(1, k) = DataGridView1.Columns(k - 1).HeaderText
-                    xlWorkSheet.Cells(i + 2, j + 1) = DataGridView1(j, i).Value.ToString()
+            pleaseWait.Show()
+            Dim xlApp As Microsoft.Office.Interop.Excel.Application
+            Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
+            Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
+            Dim misValue As Object = System.Reflection.Missing.Value
+            Dim i As Integer
+            Dim j As Integer
+
+            xlApp = New Microsoft.Office.Interop.Excel.Application
+
+            xlWorkBook = xlApp.Workbooks.Add(misValue)
+            xlWorkSheet = xlWorkBook.Sheets("Sheet1")
+
+
+
+            For i = 0 To DataGridView1.RowCount - 2
+                For j = 0 To DataGridView1.ColumnCount - 1
+                    For k As Integer = 1 To DataGridView1.Columns.Count
+                        xlWorkSheet.Cells(1, k) = DataGridView1.Columns(k - 1).HeaderText
+                        xlWorkSheet.Cells(i + 2, j + 1) = DataGridView1(j, i).Value.ToString()
+                    Next
                 Next
             Next
-        Next
 
-        xlWorkSheet.Range("A:W").EntireColumn.AutoFit()
-        xlWorkSheet.Range("F:G").NumberFormat = "h:mm AM/PM"
-
-        xlWorkSheet.SaveAs(SaveFileDialog1.FileName)
-        xlWorkBook.Close()
-        xlApp.Quit()
-
-        releaseObject(xlApp)
-        releaseObject(xlWorkBook)
-        releaseObject(xlWorkSheet)
-        pleaseWait.Close()
+            xlWorkSheet.Range("A:W").EntireColumn.AutoFit()
 
 
-        MsgBox("You can find the file at " & SaveFileDialog1.FileName)
+            xlWorkSheet.SaveAs(SaveFileDialog1.FileName)
+            xlWorkBook.Close()
+            xlApp.Quit()
+
+            releaseObject(xlApp)
+            releaseObject(xlWorkBook)
+            releaseObject(xlWorkSheet)
+            pleaseWait.Close()
 
 
+            MsgBox("You can find the file at " & SaveFileDialog1.FileName)
+
+        ElseIf Button1.Enabled = False AndAlso Button2.Enabled = True Then
+            SaveFileDialog1.Filter = "Microsoft Excel files (*.xlsx*)|*.xlsx"
+
+            SaveFileDialog1.ShowDialog()
 
 
+            pleaseWait.Show()
+            Dim xlApp As Microsoft.Office.Interop.Excel.Application
+            Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
+            Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
+            Dim misValue As Object = System.Reflection.Missing.Value
+            Dim i As Integer
+            Dim j As Integer
 
-        'Dim str As New StringBuilder
-        'For Each dr As DataRow In dbDataSet.Rows
+            xlApp = New Microsoft.Office.Interop.Excel.Application
 
-
-        ' For Each field As Object In dr.ItemArray
-
-        '      str.Append(field.ToString & ",")
-
-        'Next
-        '
-        '   str.Replace(",", vbNewLine, str.Length - 1, 1)
-
-        '        Next
-
-
-
-        'Try
-
-        ' My.Computer.FileSystem.WriteAllText(SaveFileDialog1.FileName, str.ToString, False)
-
-        '     Catch ex As Exception
-
-        '            MessageBox.Show("There was an error while exporting the data. ")
-        '
-        '        End Try
-
-        'SaveFileDialog1.Filter = "TXT Files (*.txt*)|*.txt"
-        'SaveFileDialog1.ShowDialog()
-        ' Dim sFile = SaveFileDialog1.FileName
-        ' Using f As New IO.StreamWriter(sFile, True)
-
-
-        'If SaveFileDialog1.ShowDialog = DialogResult.OK Then
+            xlWorkBook = xlApp.Workbooks.Add(misValue)
+            xlWorkSheet = xlWorkBook.Sheets("Sheet1")
 
 
 
-        'Dim col As String = ""
+            For i = 0 To DataGridView1.RowCount - 2
+                For j = 0 To DataGridView1.ColumnCount - 1
+                    For k As Integer = 1 To DataGridView1.Columns.Count
+                        xlWorkSheet.Cells(1, k) = DataGridView1.Columns(k - 1).HeaderText
+                        xlWorkSheet.Cells(i + 2, j + 1) = DataGridView1(j, i).Value.ToString()
+                    Next
+                Next
+            Next
 
-        'Dim row As String = ""
-        'Dim i As Integer = 0
-        'For Each r As DataGridViewRow In DataGridView1.Rows
-        'For Each c As DataGridViewColumn In DataGridView1.Columns
-        'row = row & "'" & Convert.ToString(r.Cells(c.HeaderText).Value) & "' "
-        ' Next
-        '            If i < DataGridView1.Rows.Count - 1 Then row &= Environment.NewLine
-        'Next
+            xlWorkSheet.Range("A:W").EntireColumn.AutoFit()
+           
+
+            xlWorkSheet.SaveAs(SaveFileDialog1.FileName)
+            xlWorkBook.Close()
+            xlApp.Quit()
+
+            releaseObject(xlApp)
+            releaseObject(xlWorkBook)
+            releaseObject(xlWorkSheet)
+            pleaseWait.Close()
 
 
-        'f.WriteLine(row)
-        'MessageBox.Show("file created")
-        'End If
-        'End Using
+            MsgBox("You can find the file at " & SaveFileDialog1.FileName)
+        End If
+
+
+
+
+
+
 
     End Sub
 
@@ -281,10 +291,10 @@ Public Class adminMain
 
     End Sub
 
-    Private Sub adminMain_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub AdminMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         Button4.Enabled = False
+        '   School = Login.School
 
-        School = Login.School
 
     End Sub
 End Class

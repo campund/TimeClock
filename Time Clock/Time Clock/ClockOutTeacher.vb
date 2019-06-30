@@ -21,12 +21,11 @@ Public Class ClockOutTeacher
         Dim SchoolConn As String
         Dim WriteQuery As String
         If School = "Northview" Then
-            SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSTimeCock;password=Class19!;database=Northview; SslMode = none"
+            SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSJAG;password=NFG0Muo4w45wKxzS;database=Northview; SslMode = none"
             WriteQuery = "Insert into Northview.attendance (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
         ElseIf School = "Terre Haute North" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=THNJAG;password=eyfImPSDtOUghm2z;database=TerreHauteNorth; SslMode = none"
             WriteQuery = "Insert into TerreHauteNorth.attendance (fname,lname,grade,Date,timeIN) values (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
-
 
         ElseIf School = "Terre Haute South" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=THSJAG;password=1367k8vPZUxhP6go;database=TerreHauteSouth; SslMode = none"

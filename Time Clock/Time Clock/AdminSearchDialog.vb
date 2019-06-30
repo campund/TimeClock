@@ -9,11 +9,17 @@ Public Class AdminSearchDialog
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
         Dim results As New DataView(adminMain.dbDataSet)
+        Dim SearchString As String
+        Dim SchoolConn As String
+        Dim MySqlConn As New MySqlConnection
+
         Dim search = TextBox1.Text
         If RadioButton1.Checked = True Then
-            results.RowFilter = String.Format("fname like'%{0}%'", search, Text)
+
+            results.RowFilter = String.Format("fName like'%{0}%'", search, Text)
+
         ElseIf RadioButton2.Checked = True Then
-            results.RowFilter = String.Format("lname like'%{0}%'", search, Text)
+            results.RowFilter = String.Format("lName like'%{0}%'", search, Text)
         ElseIf RadioButton3.Checked = True Then
             results.RowFilter = String.Format("grade like '%{0}%'", search, Text)
         ElseIf RadioButton4.Checked = True Then
@@ -22,6 +28,7 @@ Public Class AdminSearchDialog
 
 
         adminMain.DataGridView1.DataSource = results
+        MySqlConn.Close()
 
         Me.DialogResult = System.Windows.Forms.DialogResult.OK
 

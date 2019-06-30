@@ -28,7 +28,7 @@ Partial Class adminConfirm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SchoolCombo = New System.Windows.Forms.ComboBox()
-        Me.School = New System.Windows.Forms.Label()
+        Me.a = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -91,14 +91,14 @@ Partial Class adminConfirm
         Me.SchoolCombo.Size = New System.Drawing.Size(154, 21)
         Me.SchoolCombo.TabIndex = 3
         '
-        'School
+        'a
         '
-        Me.School.AutoSize = True
-        Me.School.Location = New System.Drawing.Point(12, 28)
-        Me.School.Name = "School"
-        Me.School.Size = New System.Drawing.Size(46, 13)
-        Me.School.TabIndex = 4
-        Me.School.Text = "School1"
+        Me.a.AutoSize = True
+        Me.a.Location = New System.Drawing.Point(12, 28)
+        Me.a.Name = "a"
+        Me.a.Size = New System.Drawing.Size(40, 13)
+        Me.a.TabIndex = 4
+        Me.a.Text = "School"
         '
         'adminConfirm
         '
@@ -107,7 +107,7 @@ Partial Class adminConfirm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
         Me.ClientSize = New System.Drawing.Size(202, 173)
-        Me.Controls.Add(Me.School)
+        Me.Controls.Add(Me.a)
         Me.Controls.Add(Me.SchoolCombo)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
@@ -130,5 +130,5 @@ Partial Class adminConfirm
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents SchoolCombo As ComboBox
-    Friend WithEvents School As Label
+    Friend WithEvents a As Label
 End Class

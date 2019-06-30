@@ -1,6 +1,7 @@
 ﻿Public Class CustomSplash
     Private Sub CustomSplash_Load(sender As Object, e As EventArgs) Handles Me.Load
 
+
         Timer1.Enabled = True
 
 
