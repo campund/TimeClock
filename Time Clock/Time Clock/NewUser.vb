@@ -11,14 +11,17 @@ Public Class NewUSer
         SchoolCombo.Items.Add("Terre Haute South")
         SchoolCombo.Items.Add("West Vigo")
         SchoolCombo.Items.Add("Cloverdale")
-        SchoolCombo.Items.Add("Riverton Parke")
+        SchoolCombo.Items.Add("Parke Harritage ")
         SchoolCombo.Items.Add("Turkey Run")
+        SchoolCombo.Items.Add("North Putnam")
+        SchoolCombo.Items.Add("South Putnam")
+
 
         gradeCombo.Items.Add("9")
         gradeCombo.Items.Add("10")
         gradeCombo.Items.Add("11")
         gradeCombo.Items.Add("12")
-        gradeCombo.Items.Add("Teacher/Administrator")
+        gradeCombo.Items.Add("Teacher")
 
     End Sub
 
@@ -55,7 +58,7 @@ Public Class NewUSer
             SchoolConn = "server=51.79.68.145;Port=3306; userid=CloverdaleJAG;password=iOIaRpAa34hl9UFH;database=Cloverdale; SslMode = none"
             WriteQuery = "Insert into Cloverdale.Users (username,password,First_Name,Last_Name,grade) VALUES ('" & usernameTextBox.Text & "', '" & passwordTextBox.Text & "','" & firstnameTextBox.Text & "', '" & lastnameTextBox.Text & "','" & gradelevel & "')"
 
-        ElseIf School = "Riverton Parke" Then
+        ElseIf School = "Parke Heritage" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=RivertonJAG;password=04PHQWanMT8RKg1I;database=RivertonParke; SslMode = none"
             WriteQuery = "Insert into RivertonParke.Users (username,password,First_Name,Last_Name,grade) VALUES ('" & usernameTextBox.Text & "', '" & passwordTextBox.Text & "','" & firstnameTextBox.Text & "', '" & lastnameTextBox.Text & "','" & gradelevel & "')"
 

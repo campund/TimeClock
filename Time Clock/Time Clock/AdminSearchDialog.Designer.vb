@@ -24,17 +24,23 @@ Partial Class AdminSearchDialog
     Private Sub InitializeComponent()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.toDate = New System.Windows.Forms.TextBox()
+        Me.beforeDate = New System.Windows.Forms.TextBox()
+        Me.grade = New System.Windows.Forms.TextBox()
+        Me.lName = New System.Windows.Forms.TextBox()
+        Me.fName = New System.Windows.Forms.TextBox()
+        Me.todateCheck = New System.Windows.Forms.CheckBox()
+        Me.beforedateCheck = New System.Windows.Forms.CheckBox()
+        Me.gradeCheck = New System.Windows.Forms.CheckBox()
+        Me.lNameCheck = New System.Windows.Forms.CheckBox()
+        Me.fNameCheck = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'OK_Button
         '
         Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.OK_Button.Location = New System.Drawing.Point(69, 177)
+        Me.OK_Button.Location = New System.Drawing.Point(282, 197)
         Me.OK_Button.Name = "OK_Button"
         Me.OK_Button.Size = New System.Drawing.Size(67, 23)
         Me.OK_Button.TabIndex = 0
@@ -44,63 +50,114 @@ Partial Class AdminSearchDialog
         '
         Me.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel_Button.Location = New System.Drawing.Point(142, 177)
+        Me.Cancel_Button.Location = New System.Drawing.Point(355, 197)
         Me.Cancel_Button.Name = "Cancel_Button"
         Me.Cancel_Button.Size = New System.Drawing.Size(67, 23)
         Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Cancel"
         '
-        'TextBox1
+        'toDate
         '
-        Me.TextBox1.Location = New System.Drawing.Point(11, 147)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(182, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.toDate.Enabled = False
+        Me.toDate.Location = New System.Drawing.Point(155, 169)
+        Me.toDate.Name = "toDate"
+        Me.toDate.Size = New System.Drawing.Size(283, 20)
+        Me.toDate.TabIndex = 23
+        Me.toDate.Text = "Feature Coming Soon"
+        Me.toDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'RadioButton1
+        'beforeDate
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(21, 31)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(75, 17)
-        Me.RadioButton1.TabIndex = 3
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "First Name"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.beforeDate.Enabled = False
+        Me.beforeDate.Location = New System.Drawing.Point(155, 126)
+        Me.beforeDate.Name = "beforeDate"
+        Me.beforeDate.Size = New System.Drawing.Size(283, 20)
+        Me.beforeDate.TabIndex = 22
+        Me.beforeDate.Text = "Feature Coming Soon"
+        Me.beforeDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'RadioButton2
+        'grade
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(21, 54)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(76, 17)
-        Me.RadioButton2.TabIndex = 4
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Last Name"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.grade.Enabled = False
+        Me.grade.Location = New System.Drawing.Point(155, 83)
+        Me.grade.Name = "grade"
+        Me.grade.Size = New System.Drawing.Size(283, 20)
+        Me.grade.TabIndex = 21
         '
-        'RadioButton3
+        'lName
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(21, 77)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(83, 17)
-        Me.RadioButton3.TabIndex = 5
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Grade Level"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.lName.Enabled = False
+        Me.lName.Location = New System.Drawing.Point(155, 43)
+        Me.lName.Name = "lName"
+        Me.lName.Size = New System.Drawing.Size(283, 20)
+        Me.lName.TabIndex = 20
         '
-        'RadioButton4
+        'fName
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(21, 100)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(48, 17)
-        Me.RadioButton4.TabIndex = 6
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Date"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.fName.Enabled = False
+        Me.fName.Location = New System.Drawing.Point(155, 12)
+        Me.fName.Name = "fName"
+        Me.fName.Size = New System.Drawing.Size(283, 20)
+        Me.fName.TabIndex = 19
+        '
+        'todateCheck
+        '
+        Me.todateCheck.AutoSize = True
+        Me.todateCheck.Location = New System.Drawing.Point(12, 172)
+        Me.todateCheck.Name = "todateCheck"
+        Me.todateCheck.Size = New System.Drawing.Size(65, 17)
+        Me.todateCheck.TabIndex = 18
+        Me.todateCheck.Text = "To Date"
+        Me.todateCheck.UseVisualStyleBackColor = True
+        '
+        'beforedateCheck
+        '
+        Me.beforedateCheck.AutoSize = True
+        Me.beforedateCheck.Location = New System.Drawing.Point(12, 126)
+        Me.beforedateCheck.Name = "beforedateCheck"
+        Me.beforedateCheck.Size = New System.Drawing.Size(83, 17)
+        Me.beforedateCheck.TabIndex = 17
+        Me.beforedateCheck.Text = "Before Date"
+        Me.beforedateCheck.UseVisualStyleBackColor = True
+        '
+        'gradeCheck
+        '
+        Me.gradeCheck.AutoSize = True
+        Me.gradeCheck.Location = New System.Drawing.Point(12, 83)
+        Me.gradeCheck.Name = "gradeCheck"
+        Me.gradeCheck.Size = New System.Drawing.Size(84, 17)
+        Me.gradeCheck.TabIndex = 16
+        Me.gradeCheck.Text = "Grade Level"
+        Me.gradeCheck.UseVisualStyleBackColor = True
+        '
+        'lNameCheck
+        '
+        Me.lNameCheck.AutoSize = True
+        Me.lNameCheck.Location = New System.Drawing.Point(12, 46)
+        Me.lNameCheck.Name = "lNameCheck"
+        Me.lNameCheck.Size = New System.Drawing.Size(77, 17)
+        Me.lNameCheck.TabIndex = 15
+        Me.lNameCheck.Text = "Last Name"
+        Me.lNameCheck.UseVisualStyleBackColor = True
+        '
+        'fNameCheck
+        '
+        Me.fNameCheck.AutoSize = True
+        Me.fNameCheck.Location = New System.Drawing.Point(12, 12)
+        Me.fNameCheck.Name = "fNameCheck"
+        Me.fNameCheck.Size = New System.Drawing.Size(76, 17)
+        Me.fNameCheck.TabIndex = 14
+        Me.fNameCheck.Text = "First Name"
+        Me.fNameCheck.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(9, 207)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(266, 13)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "All Dates need to be formatted like this: MM/DD/YYYY"
         '
         'AdminSearchDialog
         '
@@ -108,14 +165,20 @@ Partial Class AdminSearchDialog
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(213, 210)
-        Me.Controls.Add(Me.RadioButton4)
-        Me.Controls.Add(Me.RadioButton3)
-        Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.RadioButton1)
+        Me.ClientSize = New System.Drawing.Size(450, 228)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.toDate)
+        Me.Controls.Add(Me.beforeDate)
+        Me.Controls.Add(Me.grade)
+        Me.Controls.Add(Me.lName)
+        Me.Controls.Add(Me.fName)
+        Me.Controls.Add(Me.todateCheck)
+        Me.Controls.Add(Me.beforedateCheck)
+        Me.Controls.Add(Me.gradeCheck)
+        Me.Controls.Add(Me.lNameCheck)
+        Me.Controls.Add(Me.fNameCheck)
         Me.Controls.Add(Me.Cancel_Button)
         Me.Controls.Add(Me.OK_Button)
-        Me.Controls.Add(Me.TextBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -127,11 +190,18 @@ Partial Class AdminSearchDialog
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents OK_Button As System.Windows.Forms.Button
-    Friend WithEvents Cancel_Button As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents RadioButton4 As RadioButton
+
+    Friend WithEvents OK_Button As Button
+    Friend WithEvents Cancel_Button As Button
+    Friend WithEvents toDate As TextBox
+    Friend WithEvents beforeDate As TextBox
+    Friend WithEvents grade As TextBox
+    Friend WithEvents lName As TextBox
+    Friend WithEvents fName As TextBox
+    Friend WithEvents todateCheck As CheckBox
+    Friend WithEvents beforedateCheck As CheckBox
+    Friend WithEvents gradeCheck As CheckBox
+    Friend WithEvents lNameCheck As CheckBox
+    Friend WithEvents fNameCheck As CheckBox
+    Friend WithEvents Label1 As Label
 End Class

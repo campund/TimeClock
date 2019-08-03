@@ -16,14 +16,14 @@
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
           UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the 
+          If you want to change the Windows User Account Control level replace the
           requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward 
+         If you want to utilize File and Registry Virtualization for backward
          compatibility then delete the requestedExecutionLevel node.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Time Clock.exe" size="306136">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Time Clock.exe" size="312280">
       <assemblyIdentity name="Time Clock" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SuVWiccrBh9teBHN8g20VlhAriMsw+2sg3pxn7sWp90=</dsig:DigestValue>
+        <dsig:DigestValue>MnY/Q8kCGOKckz8EO9tNuDsknYrl9P1VM/3RZZWGIZw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -87,13 +87,13 @@
       <dsig:DigestValue>ySIo4R7XNB9djGPncJnWosTxx/w24q9lbqCR0scEbsA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Time Clock.exe.config" size="901">
+  <file name="Time Clock.exe.config" size="841">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>uMhcLrQLi/j+FHzojlVk2d0tjtzecJ5ioesJdo9ysYk=</dsig:DigestValue>
+      <dsig:DigestValue>2Dc6HasbB5P2jKyRj8ZCsOWt9puszvO8vB3286fZRCA=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

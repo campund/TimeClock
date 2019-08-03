@@ -11,16 +11,16 @@ Public Class standardMain
     Public School As String = Login.School
 
 
-    Dim Time = TimeString
+    Public Time1 = TimeString
 
-    Dim Date1 As String = System.DateTime.Now.ToString("MM/dd/yy")
+    Public Date1 As String = System.DateTime.Now.ToString("MM/dd/yy")
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Label1.Text = "Welcome " & fname & " " & lname & "! "
 
-        Label2.Text = "The current time is: " & Time
+        Label2.Text = "The current time is: " & Time1
 
 
     End Sub
@@ -33,31 +33,31 @@ Public Class standardMain
         Dim WriteQuery As String
         If School = "Northview" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=NHSJAG;password=NFG0Muo4w45wKxzS;database=Northview; SslMode = none"
-            WriteQuery = "Insert into Northview.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+            WriteQuery = "Insert into Northview.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time1 & "')"
         ElseIf School = "Terre Haute North" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=THNJAG;password=eyfImPSDtOUghm2z;database=TerreHauteNorth; SslMode = none"
-            WriteQuery = "Insert into TerreHauteNorth.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+            WriteQuery = "Insert into TerreHauteNorth.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time1 & "')"
 
 
         ElseIf School = "Terre Haute South" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=THSJAG;password=1367k8vPZUxhP6go;database=TerreHauteSouth; SslMode = none"
-            WriteQuery = "Insert into TerreHauteSouth.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+            WriteQuery = "Insert into TerreHauteSouth.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time1 & "')"
 
         ElseIf School = "West Vigo" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=WestVigoJAG;password=5C98tdsZOr8iQaTT;database=WestVigo; SslMode = none"
-            WriteQuery = "Insert into WestVigo.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+            WriteQuery = "Insert into WestVigo.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time1 & "')"
 
         ElseIf School = "Cloverdale" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=CloverdaleJAG;password=iOIaRpAa34hl9UFH;database=Cloverdale; SslMode = none"
-            WriteQuery = "Insert into Cloverdale.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+            WriteQuery = "Insert into Cloverdale.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time1 & "')"
 
         ElseIf School = "Riverton Parke" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=RivertonJAG;password=04PHQWanMT8RKg1I;database=RivertonParke; SslMode = none"
-            WriteQuery = "Insert into RivertonParke.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+            WriteQuery = "Insert into RivertonParke.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time1 & "')"
 
         ElseIf School = "Turkey Run" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=TurkeyRunJAG;password=KOa5dXlZPsu8uyJ4;database=TurkeyRun; SslMode = none"
-            WriteQuery = "Insert into TurkeyRun.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time & "')"
+            WriteQuery = "Insert into TurkeyRun.attendance (fname,lname,grade,Date,timeIN) values ('" & fname & "','" & lname & "','" & gradelevel & "','" & Date1 & "','" & Time1 & "')"
 
         End If
 

@@ -1,7 +1,7 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Login
-    Dim mainSchool As String = My.Settings.schoolSelection
+
     Dim MySqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
     Public fname As String
@@ -15,7 +15,7 @@ Public Class Login
         Dim count As Integer
 
         MySqlConn.ConnectionString =
-        "server=51.79.68.145;Port=3306; userid=NHSJAG;password=NFG0Muo4w45wKxzS;database=Northview; SslMode = none"
+        "server=51.79.68.145;Port=3306;userid=NHSJAG;password=NFG0Muo4w45wKxzS;database=Northview; SslMode = none"
         Try
             MySqlConn.Open()
             Dim Query As String
@@ -38,6 +38,7 @@ Public Class Login
                 If gradelevel = "Teacher" Then
 
                     adminConfirm.Show()
+                    adminConfirm.SchoolCombo.Text = "Northview"
                     Me.Close()
                 Else
 
@@ -78,7 +79,7 @@ Public Class Login
             READER = COMMAND.ExecuteReader
             count = 0
             While READER.Read
-                count = count + 1
+                count += 1
 
 
             End While
@@ -90,6 +91,7 @@ Public Class Login
                 If gradelevel = "Teacher" Then
 
                     adminConfirm.Show()
+                    adminConfirm.SchoolCombo.Text = "Terre Haute South"
                     Me.Close()
                 Else
 
@@ -146,6 +148,7 @@ Public Class Login
                 If gradelevel = "Teacher" Then
 
                     adminConfirm.Show()
+                    adminConfirm.SchoolCombo.Text = "Terre Haute North"
                     Me.Close()
                 Else
 
@@ -201,7 +204,67 @@ Public Class Login
                 gradelevel = READER.GetString("Grade")
                 If gradelevel = "Teacher" Then
 
+
                     adminConfirm.Show()
+                    adminConfirm.SchoolCombo.Text = "West Vigo"
+                    Me.Close()
+                Else
+
+
+                    standardMain.Show()
+                    Me.Close()
+
+                End If
+
+
+
+                MessageBox.Show("There are more than one username and password for this user")
+            Else
+                MessageBox.Show("The username/password is incorrect")
+            End If
+
+            MySqlConn.Close()
+
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            MySqlConn.Close()
+
+        End Try
+
+
+    End Function
+
+    Private Function NPHS()
+        MySqlConn = New MySqlConnection
+        Dim READER As MySqlDataReader
+        Dim count As Integer
+
+        MySqlConn.ConnectionString =
+        "server=51.79.68.145;Port=3306; userid=NPHSJAG;password=UPnLYerIS8sZGLDS;database=North_Putnam; SslMode = none"
+        Try
+            MySqlConn.Open()
+            Dim Query As String
+
+            Query = "select * from North_Putnam.Users where Username='" & UsernameTextBox.Text & "'and password='" & PasswordTextBox.Text & "'"
+
+            COMMAND = New MySqlCommand(Query, MySqlConn)
+            READER = COMMAND.ExecuteReader
+            count = 0
+            While READER.Read
+                count = count + 1
+
+
+            End While
+
+            If count = 1 Then
+                fname = READER.GetString("First_Name")
+                lname = READER.GetString("Last_Name")
+                gradelevel = READER.GetString("Grade")
+                If gradelevel = "Teacher" Then
+
+                    adminConfirm.Show()
+                    adminConfirm.SchoolCombo.Text = "North Putnam"
                     Me.Close()
                 Else
 
@@ -259,6 +322,7 @@ Public Class Login
                 If gradelevel = "Teacher" Then
 
                     adminConfirm.Show()
+                    adminConfirm.SchoolCombo.Text = "Cloverdale"
                     Me.Close()
                 Else
 
@@ -298,7 +362,7 @@ Public Class Login
             MySqlConn.Open()
             Dim Query As String
 
-            Query = "select * from WestVigo.Users where Username='" & UsernameTextBox.Text & "'and password='" & PasswordTextBox.Text & "'"
+            Query = "select * from Riverton.Users where Username='" & UsernameTextBox.Text & "'and password='" & PasswordTextBox.Text & "'"
 
             COMMAND = New MySqlCommand(Query, MySqlConn)
             READER = COMMAND.ExecuteReader
@@ -316,6 +380,7 @@ Public Class Login
                 If gradelevel = "Teacher" Then
 
                     adminConfirm.Show()
+                    adminConfirm.SchoolCombo.Text = "parke heritage"
                     Me.Close()
                 Else
 
@@ -373,6 +438,7 @@ Public Class Login
                 If gradelevel = "Teacher" Then
 
                     adminConfirm.Show()
+                    adminConfirm.SchoolCombo.Text = "Turkey Run"
                     Me.Close()
                 Else
 
@@ -400,7 +466,63 @@ Public Class Login
 
 
     End Function
+    Private Function SPHS()
+        MySqlConn = New MySqlConnection
+        Dim READER As MySqlDataReader
+        Dim count As Integer
 
+        MySqlConn.ConnectionString =
+        "server=51.79.68.145;Port=3306; userid=CloverdaleJAG;password=iOIaRpAa34hl9UFH;database=Cloverdale; SslMode = none"
+        Try
+            MySqlConn.Open()
+            Dim Query As String
+
+            Query = "select * from Cloverdale.Users where Username='" & UsernameTextBox.Text & "'and password='" & PasswordTextBox.Text & "'"
+
+            COMMAND = New MySqlCommand(Query, MySqlConn)
+            READER = COMMAND.ExecuteReader
+            count = 0
+            While READER.Read
+                count = count + 1
+
+
+            End While
+
+            If count = 1 Then
+                fname = READER.GetString("First_Name")
+                lname = READER.GetString("Last_Name")
+                gradelevel = READER.GetString("Grade")
+                If gradelevel = "Teacher" Then
+
+                    adminConfirm.Show()
+                    adminConfirm.SchoolCombo.Text = "Cloverdale"
+                    Me.Close()
+                Else
+
+
+                    standardMain.Show()
+                    Me.Close()
+
+                End If
+
+
+
+                MessageBox.Show("There are more than one username and password for this user")
+            Else
+                MessageBox.Show("The username/password is incorrect")
+            End If
+
+            MySqlConn.Close()
+
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            MySqlConn.Close()
+
+        End Try
+
+
+    End Function
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
 
         School = SchoolCombo.SelectedItem
@@ -418,13 +540,16 @@ Public Class Login
             WHS()
         ElseIf School = "Cloverdale" Then
             CHS()
-        ElseIf School = "Riverton Parke" Then
+        ElseIf School = "Parke Heritage" Then
 
             RHS()
         ElseIf School = "Turkey Run" Then
 
             TRHS()
-
+        ElseIf School = "North Putnam" Then
+            NPHS()
+        ElseIf School = "South Putnam" Then
+            SPHS()
         End If
 
     End Sub
@@ -440,7 +565,7 @@ Public Class Login
         SchoolCombo.Items.Add("Terre Haute South")
         SchoolCombo.Items.Add("West Vigo")
         SchoolCombo.Items.Add("Cloverdale")
-        SchoolCombo.Items.Add("Riverton Parke")
+        SchoolCombo.Items.Add("Parke Peritage")
         SchoolCombo.Items.Add("Turkey Run")
     End Sub
 

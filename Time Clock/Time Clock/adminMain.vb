@@ -49,7 +49,7 @@ Public Class adminMain
             SchoolConn = "server=51.79.68.145;Port=3306; userid=CloverdaleJAG;password=iOIaRpAa34hl9UFH;database=Cloverdale; SslMode = none"
             ReadQuery = "SELECT * FROM Cloverdale.Users"
 
-        ElseIf School = "Riverton Parke" Then
+        ElseIf School = "Parke Heritage" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=RivertonJAG;password=04PHQWanMT8RKg1I;database=RivertonParke; SslMode = none"
             ReadQuery = "SELECT * FROM RivertonParke.Users"
 
@@ -122,7 +122,7 @@ Public Class adminMain
             SchoolConn = "server=51.79.68.145;Port=3306; userid=CloverdaleJAG;password=iOIaRpAa34hl9UFH;database=Cloverdale; SslMode = none"
             ReadQuery = "SELECT * FROM Cloverdale.attendance"
 
-        ElseIf School = "Riverton Parke" Then
+        ElseIf School = "Parke Heritage" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=RivertonJAG;password=04PHQWanMT8RKg1I;database=RivertonParke; SslMode = none"
             ReadQuery = "SELECT * FROM RivertonParke.attendance"
 
@@ -194,12 +194,12 @@ Public Class adminMain
             Dim misValue As Object = System.Reflection.Missing.Value
             Dim i As Integer
             Dim j As Integer
-
+            pleaseWait.ProgressBar1.Value = 30
             xlApp = New Microsoft.Office.Interop.Excel.Application
 
             xlWorkBook = xlApp.Workbooks.Add(misValue)
             xlWorkSheet = xlWorkBook.Sheets("Sheet1")
-
+            pleaseWait.ProgressBar1.Value = 40
 
 
             For i = 0 To DataGridView1.RowCount - 2
@@ -210,7 +210,7 @@ Public Class adminMain
                     Next
                 Next
             Next
-
+            pleaseWait.ProgressBar1.Value = 100
             xlWorkSheet.Range("A:W").EntireColumn.AutoFit()
 
 
@@ -257,7 +257,7 @@ Public Class adminMain
             Next
 
             xlWorkSheet.Range("A:W").EntireColumn.AutoFit()
-           
+
 
             xlWorkSheet.SaveAs(SaveFileDialog1.FileName)
             xlWorkBook.Close()
@@ -271,12 +271,6 @@ Public Class adminMain
 
             MsgBox("You can find the file at " & SaveFileDialog1.FileName)
         End If
-
-
-
-
-
-
 
     End Sub
 
@@ -295,6 +289,10 @@ Public Class adminMain
         Button4.Enabled = False
         '   School = Login.School
 
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
 
     End Sub
 End Class

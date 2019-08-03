@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Time_Clock.Login
+            Me.MainForm = Global.Time_Clock.CustomSplash
         End Sub
     End Class
 End Namespace

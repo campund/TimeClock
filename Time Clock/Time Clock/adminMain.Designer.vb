@@ -29,12 +29,15 @@ Partial Class adminMain
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.exportData = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.FontDialog1 = New System.Windows.Forms.FontDialog()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 256)
+        Me.Button1.Location = New System.Drawing.Point(12, 460)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(162, 23)
         Me.Button1.TabIndex = 0
@@ -43,7 +46,7 @@ Partial Class adminMain
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(234, 256)
+        Me.Button2.Location = New System.Drawing.Point(220, 460)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(102, 23)
         Me.Button2.TabIndex = 1
@@ -52,7 +55,7 @@ Partial Class adminMain
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(665, 255)
+        Me.Button3.Location = New System.Drawing.Point(785, 460)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(98, 23)
         Me.Button3.TabIndex = 2
@@ -62,14 +65,14 @@ Partial Class adminMain
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 1)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(760, 238)
+        Me.DataGridView1.Size = New System.Drawing.Size(880, 453)
         Me.DataGridView1.TabIndex = 3
         '
         'exportData
         '
-        Me.exportData.Location = New System.Drawing.Point(567, 255)
+        Me.exportData.Location = New System.Drawing.Point(672, 460)
         Me.exportData.Name = "exportData"
         Me.exportData.Size = New System.Drawing.Size(75, 23)
         Me.exportData.TabIndex = 4
@@ -78,7 +81,7 @@ Partial Class adminMain
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(378, 256)
+        Me.Button4.Location = New System.Drawing.Point(355, 459)
         Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(87, 23)
@@ -86,13 +89,23 @@ Partial Class adminMain
         Me.Button4.Text = "Search Data"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(490, 460)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(141, 23)
+        Me.Button5.TabIndex = 6
+        Me.Button5.Text = "Add Attendance Data"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'adminMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(775, 290)
+        Me.ClientSize = New System.Drawing.Size(895, 495)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.exportData)
         Me.Controls.Add(Me.DataGridView1)
@@ -114,4 +127,7 @@ Partial Class adminMain
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents exportData As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents FontDialog1 As FontDialog
+    Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents Button5 As Button
 End Class

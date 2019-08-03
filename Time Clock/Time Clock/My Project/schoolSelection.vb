@@ -13,7 +13,7 @@
         schoolCombo.Items.Add("Terre Haute South")
         schoolCombo.Items.Add("West Vigo")
         schoolCombo.Items.Add("Cloverdale")
-        schoolCombo.Items.Add("Riverton Parke")
+        schoolCombo.Items.Add("parke heritage")
         schoolCombo.Items.Add("Turkey Run")
 
     End Sub

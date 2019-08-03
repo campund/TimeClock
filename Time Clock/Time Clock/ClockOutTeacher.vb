@@ -39,7 +39,7 @@ Public Class ClockOutTeacher
             SchoolConn = "server=51.79.68.145;Port=3306; userid=CloverdaleJAG;password=iOIaRpAa34hl9UFH;database=Cloverdale; SslMode = none"
             WriteQuery = "Insert into Cloverdale.attendance (fname,lname,grade,Date,timeIN) values (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
 
-        ElseIf School = "Riverton Parke" Then
+        ElseIf School = "parke heritage" Then
             SchoolConn = "server=51.79.68.145;Port=3306; userid=RivertonJAG;password=04PHQWanMT8RKg1I;database=RivertonParke; SslMode = none"
             WriteQuery = "Insert into RivertonParke.attendance (fname,lname,grade,Date,timeIN) values (fname,lname,grade, timeOUT, Reason, TeacherName) values ('" & fname & "','" & lname & "','" & grade & "','" & Time & "','" & reason & "','" & Teacher & "')"
 

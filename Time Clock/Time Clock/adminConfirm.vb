@@ -33,7 +33,7 @@ Public Class adminConfirm
         SchoolCombo.Items.Add("Terre Haute South")
         SchoolCombo.Items.Add("West Vigo")
         SchoolCombo.Items.Add("Cloverdale")
-        SchoolCombo.Items.Add("Riverton Parke")
+        SchoolCombo.Items.Add("Parke Heritage")
         SchoolCombo.Items.Add("Turkey Run")
     End Sub
 End Class

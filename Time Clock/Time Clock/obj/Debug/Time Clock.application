@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Time Clock.exe.manifest" size="5301">
+    <dependentAssembly dependencyType="install" codebase="Time Clock.exe.manifest" size="5299">
       <assemblyIdentity name="Time Clock.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xsF4+aoV7+NEiaER8JLawEAVV5aiIX8t7bAdnkN9Rtc=</dsig:DigestValue>
+        <dsig:DigestValue>WLWPv4VOjI0qjAuIVP8GFfK6PWRVKMyyEu7WXCZ+tw4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

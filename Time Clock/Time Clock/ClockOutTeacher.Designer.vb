@@ -63,7 +63,7 @@ Partial Class ClockOutTeacher
         Me.Controls.Add(Me.teacherInput)
         Me.Name = "ClockOutTeacher"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Teacher Name Dialog"
+        Me.Text = "9"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
